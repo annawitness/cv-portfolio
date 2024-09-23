@@ -9,11 +9,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Build and Deploy
+      - name: Create public directory
+        run: mkdir -p public
+      - name: Copy files to public
         run: |
-          mkdir -p public
           cp -R * public/
-          echo "Deploying to GitHub Pages"
+          rm -rf public/public # Supprimer le sous-dossier public s'il existe
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
