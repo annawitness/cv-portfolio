@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    width: 100%;
+    z-index: 1000;
+    margin-top: 220px;
+    position: fixed;
+
+}
+
+hr {
+    border: 0;
+    height: 4px;
+    background-color: rgba(16, 106, 147, 0.991);
+    width: 100%;
+    margin: 20px auto;
+    opacity: 1;
+}
+
+.name {
+
+    margin-top: -100px;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 3;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+}
+
+
+
+.scrollable-content {
+
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 17%;
+    height: calc(100vh - 229px);
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: fixed;
+    padding: 100px 20px;
+    overscroll-behavior-x: none;
+    gap: 10px;
+
+}
+
+.profile,
+.infos {
+    box-sizing: border-box;
+}
+
+.profile {
+    background-color: rgba(126, 198, 231, 0.712);
+    padding: 25px 20px;
+    color: #333;
+    max-height: 100%;
+    margin-left: -25px;
+    margin-top: -23.6px;
+    width: 8100%;
+
+
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    background-image: url("../images/anna.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    background-color: rgb(219, 182, 21);
+    object-fit: contain;
+    border: 2px solid #fff;
+    position: absolute;
+    margin-top: -150px;
+    left: 20px;
+    z-index: 1000;
+}
+
+
+.job {
+    background-color: rgba(16, 106, 147, 0.991);
+    height: 90px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+}
+
+.job h3 {
+
+    margin-top: 34px;
+    margin-left: -145px;
+}
+
+.infos {
+    margin-left: -60px;
+    max-height: 10%;
+}
+
+.portfolio1,
+.portfolio2,
+.portfolio3 {
+    width: 200px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    border: 1px solid rgba(236, 242, 245, 0.991);
+    border-radius: 10px 10px;
+    box-shadow: rgba(16, 106, 147, 0.991);
+    max-height: 80%;
+}
+
+
+.portfolio1 a,
+.portfolio2 a,
+.portfolio3 a {
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(52, 24, 214);
+    display: flex;
+    justify-content: center;
+}
+
+
+.portfolio1 a:hover,
+.portfolio2 a:hover,
+.portfolio3 a:hover {
+    color: #2ea3b2;
+}
+
+.card img {
+    max-height: 33%;
+    background-size: contain;
+}
+
+footer {
+
+    background-color: rgb(1, 7, 20, 0.891);
+    color: white;
+    text-align: center;
+    display: none;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    left: 0;
+    max-height: 50%;
+    overflow-y: auto;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+
+footer textarea {
+    width: 50%;
+    height: 150px;
+    border: solid 1px;
+    border-radius: 10px 10px 10px;
+    margin-bottom: 5px;
+}
+
+footer button {
+    margin-top: 10px;
+}
+
+
+footer form {
+    margin-bottom: 10px;
+}
+
+#arrow-down {
+    cursor: pointer;
+    font-size: 44px;
+    font-weight: bolder 100;
+    color: rgb(18, 18, 17);
+    margin-left: 180px;
+
+}
+
+#arrow-up {
+    cursor: pointer;
+    font-size: 44px;
+    font-weight: 600;
+}
+
+
+.form-control {
+    width: 410px;
+    margin-left: 300px;
+    margin-top: 2px;
+}
+
+
+
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    header {
+        margin-top: 150px;
+    }
+
+    .name {
+        margin-top: -70px;
+    }
+
+    .scrollable-content {
+        padding: 60px 10px;
+        margin-top: 37%;
+    }
+
+    .profile {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        margin-top: -90px;
+        left: 10px;
+    }
+
+    .job {
+        height: 60px;
+    }
+
+    .job h3 {
+        margin-top: 20px;
+        font-size: 14px;
+        margin-left: -1px;
+    }
+
+    .portfolio1,
+    .portfolio2,
+    .portfolio3 {
+        flex-direction: column;
+        width: 50%;
+        margin-top: 15px;
+    }
+
+    .portfolio1 a,
+    .portfolio2 a,
+    .portfolio3 a {
+        font-size: 14px;
+    }
+
+    footer {
+        max-height: 100px;
+        overflow-y: auto;
+    }
+
+    footer textarea {
+        width: 90%;
+    }
+
+    .form-control {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #arrow-down,
+    #arrow-up {
+        font-size: 36px;
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .profile {
+        background-color: rgba(126, 198, 231, 0.712);
+        max-height: 100%;
+        margin-left: -25px;
+        margin-top: -12px;
+        width: 92%;
+    }
+
+    .scrollable-content {
+        margin-top: 17%;
+    }
+
+    .portfolio1,
+    .portfolio2,
+    .portfolio3 {
+        width: 135px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        border: 1px solid rgba(236, 242, 245, 0.991);
+        border-radius: 10px;
+        max-height: 64%;
+        font-size: 10px;
+    }
+
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .form-control {
+        margin-left: 194px;
+        width: 50%;
+    }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    header {
+        margin-top: 200px;
+    }
+
+    .name {
+        margin-top: -90px;
+    }
+
+    .scrollable-content {
+        margin-top: 34%;
+        padding: 80px 20px;
+    }
+
+    .profile {
+        width: 90%;
+        margin-left: 0;
+        margin-top: -15px;
+        background-color: rgba(126, 198, 231, 0.712);
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        margin-top: -120px;
+
+    }
+
+    .job {
+        height: 80px;
+        font-size: 24px;
+    }
+
+    .job h3 {
+        margin-top: 20px;
+
+        font-size: 16px;
+    }
+
+    .portfolio1,
+    .portfolio2,
+    .portfolio3 {
+        width: 180px;
+        margin-top: 20px;
+
+    }
+
+    .portfolio1 a,
+    .portfolio2 a,
+    .portfolio3 a {
+        font-size: 14px;
+    }
+
+    footer {
+        max-height: 120px;
+        padding: 10px;
+    }
+
+    .form-control {
+        width: 50%;
+        margin-left: -30%;
+    }
+
+    #arrow-down,
+    #arrow-up {
+        font-size: 40px;
+    }
+}
+
+
+@media (max-width: 1440px) {
+    .profile {
+        width: 92%;
+        margin-left: -25px;
+        margin-top: -23px;
+    }
+
+    .scrollable-content {
+        margin-top: 12%;
+        height: calc(100vh - 5vh);
+    }
+
+    #arrow-down {
+        margin-left: 310px;
+        margin-top: -50px;
+    }
+
+    .form-control {
+        margin-left: 390px;
+        width: 45%;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 1442px) and (max-width: 2560px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile {
+        background-color: rgba(126, 198, 231, 0.712);
+        color: #333;
+        height: 220%;
+        max-height: 100%;
+        margin-left: -25px;
+        margin-top: -23px;
+        width: 92%;
+    }
+
+    .scrollable-content {
+        margin-top: 7%;
+        height: calc(100vh - 5vh);
+    }
+
+    #arrow-down {
+        cursor: pointer;
+        font-size: 44px;
+        margin-left: 680px;
+        margin-top: -80px;
+    }
+
+    .job h3 {
+        margin-top: 34px;
+        margin-left: -400px;
+    }
+
+
+    .form-control {
+        margin-left: 780px;
+        width: 40%;
+    }
+}
